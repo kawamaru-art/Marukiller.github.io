@@ -171,15 +171,15 @@ img{
     align-items: center;
     text-align: center;
 }
-.informasi{
-    align-items: center;
-    text-align: center;
-    
-}
 img{
     width: 600;
     align-items: center;
     text-align: center;
+}
+.informasi{
+    align-items: center;
+    text-align: center;
+    
 }
 .informasi a{
     position: relative;
@@ -396,11 +396,76 @@ img{
             text-shadow: 0 0 10px cyan, 0 0 0 20px cyan, 0 0 0 30px cyan, 0 0 0 40px cyan, 0 0 0 50px cyan, 0 0 0 60px cyan, 0 0 0 70px cyan;
         }
     }
-    .informasi h2{
+
+    .informasi{
+        align-items: center;
         text-align: center;
-        display: flex;
-        justify-content: center;
+        
     }
+    .informasi a{
+        position: relative;
+        background: #444;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        letter-spacing: 0.1em;
+        padding: 10px 30px;
+        transition: 0.5s;
+    }
+    .informasi a:hover{
+        letter-spacing: 0.25em;
+        background: var(--clr);
+        box-shadow: 0 0 35px var(--clr);
+    }
+    .informasi a::before{
+        content: '';
+        position: absolute;
+        inset: 2px;
+        background: black;
+    }
+    .informasi a span{
+        position: relative;
+        z-index: 1;
+    }
+    .informasi a i{
+        position: absolute;
+        inset: 0;
+        display: block;
+    }
+    .informasi a i::before{
+        content: '';
+        position: absolute;
+        top: -3.5px;
+        left: 80%;
+        width: 10px;
+        height: 8px;
+        border: 2px solid var(--clr);
+        background: black;
+        transform: translateX(-50%);
+        transition: 0.5s;
+    }
+    .informasi a:hover i::before{
+        width: 20px;
+        left: 20%;
+    }
+    .informasi a i::after{
+        content: '';
+        position: absolute;
+        bottom: -3.5px;
+        left: 20%;
+        width: 10px;
+        height: 8px;
+        border: 2px solid var(--clr);
+        background: black;
+        transform: translateX(-50%);
+        transition: 0.5s;
+    }
+    .informasi a:hover i::after{
+        width: 20px;
+        left: 80%;
+    }
+    
 }
 @media screen and (max-width : 430px) and (min-width : 390px){
     h1{
@@ -545,7 +610,7 @@ img{
         animation: animate 2s linear infinite;
     }
     img{
-        width: 400;
+        width: 350;
         align-items: center;
         text-align: center;
     }
@@ -559,6 +624,74 @@ img{
             color: cyan;
             text-shadow: 0 0 10px cyan, 0 0 0 20px cyan, 0 0 0 30px cyan, 0 0 0 40px cyan, 0 0 0 50px cyan, 0 0 0 60px cyan, 0 0 0 70px cyan;
         }
+    }
+    .informasi{
+        align-items: center;
+        text-align: center;
+        
+    }
+    .informasi a{
+        position: relative;
+        background: #444;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.0em;
+        letter-spacing: 0.1em;
+        padding: 10px 30px;
+        transition: 0.5s;
+    }
+    .informasi a:hover{
+        letter-spacing: 0.25em;
+        background: var(--clr);
+        box-shadow: 0 0 35px var(--clr);
+    }
+    .informasi a::before{
+        content: '';
+        position: absolute;
+        inset: 2px;
+        background: black;
+    }
+    .informasi a span{
+        position: relative;
+        z-index: 1;
+    }
+    .informasi a i{
+        position: absolute;
+        inset: 0;
+        display: block;
+    }
+    .informasi a i::before{
+        content: '';
+        position: absolute;
+        top: -3.5px;
+        left: 80%;
+        width: 10px;
+        height: 8px;
+        border: 2px solid var(--clr);
+        background: black;
+        transform: translateX(-50%);
+        transition: 0.5s;
+    }
+    .informasi a:hover i::before{
+        width: 20px;
+        left: 20%;
+    }
+    .informasi a i::after{
+        content: '';
+        position: absolute;
+        bottom: -3.5px;
+        left: 20%;
+        width: 10px;
+        height: 8px;
+        border: 2px solid var(--clr);
+        background: black;
+        transform: translateX(-50%);
+        transition: 0.5s;
+    }
+    .informasi a:hover i::after{
+        width: 20px;
+        left: 80%;
     }
 
 }
@@ -705,7 +838,7 @@ img{
         animation: animate 2s linear infinite;
     }
     img{
-        width: 400;
+        width: 250;
         align-items: center;
         text-align: center;
     }
@@ -719,6 +852,74 @@ img{
             color: cyan;
             text-shadow: 0 0 10px cyan, 0 0 0 20px cyan, 0 0 0 30px cyan, 0 0 0 40px cyan, 0 0 0 50px cyan, 0 0 0 60px cyan, 0 0 0 70px cyan;
         }
+    }
+    .informasi{
+        align-items: center;
+        text-align: center;
+        
+    }
+    .informasi a{
+        position: relative;
+        background: #444;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.0em;
+        letter-spacing: 0.1em;
+        padding: 10px 30px;
+        transition: 0.5s;
+    }
+    .informasi a:hover{
+        letter-spacing: 0.25em;
+        background: var(--clr);
+        box-shadow: 0 0 35px var(--clr);
+    }
+    .informasi a::before{
+        content: '';
+        position: absolute;
+        inset: 2px;
+        background: black;
+    }
+    .informasi a span{
+        position: relative;
+        z-index: 1;
+    }
+    .informasi a i{
+        position: absolute;
+        inset: 0;
+        display: block;
+    }
+    .informasi a i::before{
+        content: '';
+        position: absolute;
+        top: -3.5px;
+        left: 80%;
+        width: 10px;
+        height: 8px;
+        border: 2px solid var(--clr);
+        background: black;
+        transform: translateX(-50%);
+        transition: 0.5s;
+    }
+    .informasi a:hover i::before{
+        width: 20px;
+        left: 20%;
+    }
+    .informasi a i::after{
+        content: '';
+        position: absolute;
+        bottom: -3.5px;
+        left: 20%;
+        width: 10px;
+        height: 8px;
+        border: 2px solid var(--clr);
+        background: black;
+        transform: translateX(-50%);
+        transition: 0.5s;
+    }
+    .informasi a:hover i::after{
+        width: 20px;
+        left: 80%;
     }
 }
 @media screen and (max-width : 361px) and (min-width : 310px){
@@ -864,7 +1065,7 @@ img{
         animation: animate 2s linear infinite;
     }
     img{
-        width: 400;
+        width: 250;
         align-items: center;
         text-align: center;
     }
@@ -878,5 +1079,73 @@ img{
             color: cyan;
             text-shadow: 0 0 10px cyan, 0 0 0 20px cyan, 0 0 0 30px cyan, 0 0 0 40px cyan, 0 0 0 50px cyan, 0 0 0 60px cyan, 0 0 0 70px cyan;
         }
+    }
+    .informasi{
+        align-items: center;
+        text-align: center;
+        
+    }
+    .informasi a{
+        position: relative;
+        background: #444;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.0em;
+        letter-spacing: 0.1em;
+        padding: 10px 30px;
+        transition: 0.5s;
+    }
+    .informasi a:hover{
+        letter-spacing: 0.25em;
+        background: var(--clr);
+        box-shadow: 0 0 35px var(--clr);
+    }
+    .informasi a::before{
+        content: '';
+        position: absolute;
+        inset: 2px;
+        background: black;
+    }
+    .informasi a span{
+        position: relative;
+        z-index: 1;
+    }
+    .informasi a i{
+        position: absolute;
+        inset: 0;
+        display: block;
+    }
+    .informasi a i::before{
+        content: '';
+        position: absolute;
+        top: -3.5px;
+        left: 80%;
+        width: 10px;
+        height: 8px;
+        border: 2px solid var(--clr);
+        background: black;
+        transform: translateX(-50%);
+        transition: 0.5s;
+    }
+    .informasi a:hover i::before{
+        width: 20px;
+        left: 20%;
+    }
+    .informasi a i::after{
+        content: '';
+        position: absolute;
+        bottom: -3.5px;
+        left: 20%;
+        width: 10px;
+        height: 8px;
+        border: 2px solid var(--clr);
+        background: black;
+        transform: translateX(-50%);
+        transition: 0.5s;
+    }
+    .informasi a:hover i::after{
+        width: 20px;
+        left: 80%;
     }
 }
